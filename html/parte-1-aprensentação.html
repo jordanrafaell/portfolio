@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/style.fundo-pagina-principal.css">
+
+        <title>Dev Jordan </title>
+    </head>
+    <style>
+        body{
+    padding: 0;
+    margin: 0;
+    background-color: #330033;
+    color: #fff;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+                            /*ESTILIZANDO LINKS DO TOPO*/
+.topo {
+    position: relative;
+    padding-top: 3px;
+    width: 100%;
+    height: 6vh;
+    background-color: rgb(0, 0, 0);
+    color: azure;
+    background-color: #ffffff;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.link-topo{
+    list-style:none;
+    position: absolute;
+    right: 39px;
+    top: -5px;
+}
+.link-topo li {
+    position:relative;
+    float:left;
+}
+.link-topo li a{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+
+.link-topo li a:hover{
+    background:#333;
+    color:#fff;
+    -moz-box-shadow:0 3px 10px 0 #CCC;
+    -webkit-box-shadow:0 3px 10px 0 #ccc;
+    text-shadow:0px 0px 5px #fff;
+}
+
+.link-topo li  ul{
+    position:absolute;
+    top: 25px;
+    left:0;
+    background-color:#fff;
+    display:none;
+}
+
+.link-topo li:hover ul, .link-topo li.over ul{display:block;}
+
+.link-topo li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width: 150px;
+}
+
+
+.letra-personalizada{
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 6s steps(30) infinite alternate,
+      blink 200ms steps(1) infinite normal;
+    border-right: 2px solid rgb(253, 253, 253);
+  }
+  @keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 83%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: rgb(255, 255, 255);
+    }
+    to {
+      border-color: transparent;
+    }
+  }       
+                        /*apresentação*/
+.apresentacao{
+    width: 350px;
+    position: relative;
+    bottom: -210px;
+    left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.meu-home span{
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px,
+     #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px,
+      #FF2D95 0px 0px 75px, 9px -39px 0px rgba(88,33,206,0), 9px -39px 0px rgba(88,33,206,0);
+    color: #FFFFFF;
+    font-weight: bold;
+    color: rgb(89, 0, 255);
+    font-size: 30px;
+}
+
+
+.meu-home p {
+    font-weight: bold;
+}
+                        /*MINHA IMAGEM*/
+.logo-eu{
+    position: relative;
+    border-radius: 50%;
+    right: -90vh;
+    top: -50px;
+    transform: translateY(0px);
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+/*SOBRE*/
+
+
+.block2{
+    background-color: #330055;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg fill-opacity='0.74'%3E%3Ccircle fill='%23330055' cx='50' cy='0' r='50'/%3E%3Cg fill='%2334025c' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23360363' cx='50' cy='100' r='50'/%3E%3Cg fill='%23370569' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23390770' cx='50' cy='200' r='50'/%3E%3Cg fill='%233a0877' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%233c0a7e' cx='50' cy='300' r='50'/%3E%3Cg fill='%233d0c84' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%233f0d8b' cx='50' cy='400' r='50'/%3E%3Cg fill='%23400f92' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23421199' cx='50' cy='500' r='50'/%3E%3Cg fill='%2343129f' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%234414a6' cx='50' cy='600' r='50'/%3E%3Cg fill='%234615ad' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%234717b4' cx='50' cy='700' r='50'/%3E%3Cg fill='%234919ba' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%234a1ac1' cx='50' cy='800' r='50'/%3E%3Cg fill='%234c1cc8' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%234d1ecf' cx='50' cy='900' r='50'/%3E%3Cg fill='%234f1fd5' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%235021DC' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.titulo1 h1{
+    text-align: center;
+    height: 35px;
+    padding-top: 10px;
+    border-radius: 5px;
+    background-color: #000022;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1081' height='1081' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke-opacity='0.55'%3E%3Cg stroke='%23026' stroke-width='17'%3E%3Cline x1='-8' y1='-8' x2='808' y2='808'/%3E%3Cline x1='-8' y1='792' x2='808' y2='1608'/%3E%3Cline x1='-8' y1='-808' x2='808' y2='8'/%3E%3C/g%3E%3Cg stroke='%23002163' stroke-width='16'%3E%3Cline x1='-8' y1='767' x2='808' y2='1583'/%3E%3Cline x1='-8' y1='17' x2='808' y2='833'/%3E%3Cline x1='-8' y1='-33' x2='808' y2='783'/%3E%3Cline x1='-8' y1='-783' x2='808' y2='33'/%3E%3C/g%3E%3Cg stroke='%23002060' stroke-width='15'%3E%3Cline x1='-8' y1='742' x2='808' y2='1558'/%3E%3Cline x1='-8' y1='42' x2='808' y2='858'/%3E%3Cline x1='-8' y1='-58' x2='808' y2='758'/%3E%3Cline x1='-8' y1='-758' x2='808' y2='58'/%3E%3C/g%3E%3Cg stroke='%23001f5c' stroke-width='14'%3E%3Cline x1='-8' y1='67' x2='808' y2='883'/%3E%3Cline x1='-8' y1='717' x2='808' y2='1533'/%3E%3Cline x1='-8' y1='-733' x2='808' y2='83'/%3E%3Cline x1='-8' y1='-83' x2='808' y2='733'/%3E%3C/g%3E%3Cg stroke='%23001e59' stroke-width='13'%3E%3Cline x1='-8' y1='92' x2='808' y2='908'/%3E%3Cline x1='-8' y1='692' x2='808' y2='1508'/%3E%3Cline x1='-8' y1='-108' x2='808' y2='708'/%3E%3Cline x1='-8' y1='-708' x2='808' y2='108'/%3E%3C/g%3E%3Cg stroke='%23001d56' stroke-width='12'%3E%3Cline x1='-8' y1='667' x2='808' y2='1483'/%3E%3Cline x1='-8' y1='117' x2='808' y2='933'/%3E%3Cline x1='-8' y1='-133' x2='808' y2='683'/%3E%3Cline x1='-8' y1='-683' x2='808' y2='133'/%3E%3C/g%3E%3Cg stroke='%23001c53' stroke-width='11'%3E%3Cline x1='-8' y1='642' x2='808' y2='1458'/%3E%3Cline x1='-8' y1='142' x2='808' y2='958'/%3E%3Cline x1='-8' y1='-158' x2='808' y2='658'/%3E%3Cline x1='-8' y1='-658' x2='808' y2='158'/%3E%3C/g%3E%3Cg stroke='%23001b4f' stroke-width='10'%3E%3Cline x1='-8' y1='167' x2='808' y2='983'/%3E%3Cline x1='-8' y1='617' x2='808' y2='1433'/%3E%3Cline x1='-8' y1='-633' x2='808' y2='183'/%3E%3Cline x1='-8' y1='-183' x2='808' y2='633'/%3E%3C/g%3E%3Cg stroke='%23001a4c' stroke-width='9'%3E%3Cline x1='-8' y1='592' x2='808' y2='1408'/%3E%3Cline x1='-8' y1='192' x2='808' y2='1008'/%3E%3Cline x1='-8' y1='-608' x2='808' y2='208'/%3E%3Cline x1='-8' y1='-208' x2='808' y2='608'/%3E%3C/g%3E%3Cg stroke='%23001949' stroke-width='8'%3E%3Cline x1='-8' y1='567' x2='808' y2='1383'/%3E%3Cline x1='-8' y1='217' x2='808' y2='1033'/%3E%3Cline x1='-8' y1='-233' x2='808' y2='583'/%3E%3Cline x1='-8' y1='-583' x2='808' y2='233'/%3E%3C/g%3E%3Cg stroke='%23001846' stroke-width='7'%3E%3Cline x1='-8' y1='242' x2='808' y2='1058'/%3E%3Cline x1='-8' y1='542' x2='808' y2='1358'/%3E%3Cline x1='-8' y1='-558' x2='808' y2='258'/%3E%3Cline x1='-8' y1='-258' x2='808' y2='558'/%3E%3C/g%3E%3Cg stroke='%23001743' stroke-width='6'%3E%3Cline x1='-8' y1='267' x2='808' y2='1083'/%3E%3Cline x1='-8' y1='517' x2='808' y2='1333'/%3E%3Cline x1='-8' y1='-533' x2='808' y2='283'/%3E%3Cline x1='-8' y1='-283' x2='808' y2='533'/%3E%3C/g%3E%3Cg stroke='%2300163f' stroke-width='5'%3E%3Cline x1='-8' y1='292' x2='808' y2='1108'/%3E%3Cline x1='-8' y1='492' x2='808' y2='1308'/%3E%3Cline x1='-8' y1='-308' x2='808' y2='508'/%3E%3Cline x1='-8' y1='-508' x2='808' y2='308'/%3E%3C/g%3E%3Cg stroke='%2300153c' stroke-width='4'%3E%3Cline x1='-8' y1='467' x2='808' y2='1283'/%3E%3Cline x1='-8' y1='317' x2='808' y2='1133'/%3E%3Cline x1='-8' y1='-333' x2='808' y2='483'/%3E%3Cline x1='-8' y1='-483' x2='808' y2='333'/%3E%3C/g%3E%3Cg stroke='%23001439' stroke-width='3'%3E%3Cline x1='-8' y1='342' x2='808' y2='1158'/%3E%3Cline x1='-8' y1='442' x2='808' y2='1258'/%3E%3Cline x1='-8' y1='-458' x2='808' y2='358'/%3E%3Cline x1='-8' y1='-358' x2='808' y2='458'/%3E%3C/g%3E%3Cg stroke='%23001336' stroke-width='2'%3E%3Cline x1='-8' y1='367' x2='808' y2='1183'/%3E%3Cline x1='-8' y1='417' x2='808' y2='1233'/%3E%3Cline x1='-8' y1='-433' x2='808' y2='383'/%3E%3Cline x1='-8' y1='-383' x2='808' y2='433'/%3E%3C/g%3E%3Cg stroke='%23013' stroke-width='1'%3E%3Cline x1='-8' y1='392' x2='808' y2='1208'/%3E%3Cline x1='-8' y1='-408' x2='808' y2='408'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+.titulo2{
+    background: #5d0399;
+    height: 60px;
+    text-align: center;
+    margin-top: -19px;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 900;
+}
+.background-video{
+    height: 65vh;
+    border-radius: 50%;
+    margin-top: 35px;
+}
+.informacoes{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    height: 600px;
+}
+
+.informacoes li {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #610976;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23826aed' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23a52828' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%237c47e6' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%239b1f47' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%238c34f1' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2393337a' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23a144dd' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%2368157c' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23a021bd' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23482f77' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ad2cad' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%232e2d6c' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100px;
+    width: 171%;
+    border-radius: 10vh;
+    text-align: center;
+    position: relative;
+    right: 40px;
+    margin-top: 20px;
+}
+
+
+.aniversario2{
+    margin-top: 40px;
+    margin-right: -120px;
+    margin-left: 110px;
+    font-size: 20px;
+}
+
+.Cidade2{
+    margin-top: 40px;
+    margin-right: -150px;
+    margin-left: 110px;
+    font-size: 20px;
+    position: absolute;
+    left: 5%;
+}
+
+.Disponivel2{
+    margin-top: 40px;
+    margin-right: -150px;
+    margin-left: 110px;
+    font-size: 20px;
+    position: absolute;
+    left: 10%;
+}
+
+.Escolaridade2{
+    margin-top: 40px;
+    margin-right: -10px;
+    margin-left: -100px;
+    font-size: 20px;
+    position: absolute;
+    left: 32%;
+}
+
+
+/*rojetos*/
+
+.block3{
+    background-color: #0A0A20;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%237C40FF' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='8.1' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' stroke-opacity='0.45'%3E%3Cg %3E%3Ccircle fill='%237C40FF' fill-opacity='0.45' r='10'/%3E%3Cg transform='rotate(-27 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(-10.8 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(12.15 0 0)'%3E%3Cg%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(48.6 0 0)'%3E%3Cg transform=''%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform=''%3E%3Cg transform='rotate(-12.15 0 0)'%3E%3Cg transform='rotate(-64.8 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -20px;
+    height: 100vh;
+}
+
+.block3 h1{
+    text-align: center;
+    height: 35px;
+    padding-top: 10px;
+    border-radius: 5px;
+    background-color: #000022;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1081' height='1081' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke-opacity='0.55'%3E%3Cg stroke='%23026' stroke-width='17'%3E%3Cline x1='-8' y1='-8' x2='808' y2='808'/%3E%3Cline x1='-8' y1='792' x2='808' y2='1608'/%3E%3Cline x1='-8' y1='-808' x2='808' y2='8'/%3E%3C/g%3E%3Cg stroke='%23002163' stroke-width='16'%3E%3Cline x1='-8' y1='767' x2='808' y2='1583'/%3E%3Cline x1='-8' y1='17' x2='808' y2='833'/%3E%3Cline x1='-8' y1='-33' x2='808' y2='783'/%3E%3Cline x1='-8' y1='-783' x2='808' y2='33'/%3E%3C/g%3E%3Cg stroke='%23002060' stroke-width='15'%3E%3Cline x1='-8' y1='742' x2='808' y2='1558'/%3E%3Cline x1='-8' y1='42' x2='808' y2='858'/%3E%3Cline x1='-8' y1='-58' x2='808' y2='758'/%3E%3Cline x1='-8' y1='-758' x2='808' y2='58'/%3E%3C/g%3E%3Cg stroke='%23001f5c' stroke-width='14'%3E%3Cline x1='-8' y1='67' x2='808' y2='883'/%3E%3Cline x1='-8' y1='717' x2='808' y2='1533'/%3E%3Cline x1='-8' y1='-733' x2='808' y2='83'/%3E%3Cline x1='-8' y1='-83' x2='808' y2='733'/%3E%3C/g%3E%3Cg stroke='%23001e59' stroke-width='13'%3E%3Cline x1='-8' y1='92' x2='808' y2='908'/%3E%3Cline x1='-8' y1='692' x2='808' y2='1508'/%3E%3Cline x1='-8' y1='-108' x2='808' y2='708'/%3E%3Cline x1='-8' y1='-708' x2='808' y2='108'/%3E%3C/g%3E%3Cg stroke='%23001d56' stroke-width='12'%3E%3Cline x1='-8' y1='667' x2='808' y2='1483'/%3E%3Cline x1='-8' y1='117' x2='808' y2='933'/%3E%3Cline x1='-8' y1='-133' x2='808' y2='683'/%3E%3Cline x1='-8' y1='-683' x2='808' y2='133'/%3E%3C/g%3E%3Cg stroke='%23001c53' stroke-width='11'%3E%3Cline x1='-8' y1='642' x2='808' y2='1458'/%3E%3Cline x1='-8' y1='142' x2='808' y2='958'/%3E%3Cline x1='-8' y1='-158' x2='808' y2='658'/%3E%3Cline x1='-8' y1='-658' x2='808' y2='158'/%3E%3C/g%3E%3Cg stroke='%23001b4f' stroke-width='10'%3E%3Cline x1='-8' y1='167' x2='808' y2='983'/%3E%3Cline x1='-8' y1='617' x2='808' y2='1433'/%3E%3Cline x1='-8' y1='-633' x2='808' y2='183'/%3E%3Cline x1='-8' y1='-183' x2='808' y2='633'/%3E%3C/g%3E%3Cg stroke='%23001a4c' stroke-width='9'%3E%3Cline x1='-8' y1='592' x2='808' y2='1408'/%3E%3Cline x1='-8' y1='192' x2='808' y2='1008'/%3E%3Cline x1='-8' y1='-608' x2='808' y2='208'/%3E%3Cline x1='-8' y1='-208' x2='808' y2='608'/%3E%3C/g%3E%3Cg stroke='%23001949' stroke-width='8'%3E%3Cline x1='-8' y1='567' x2='808' y2='1383'/%3E%3Cline x1='-8' y1='217' x2='808' y2='1033'/%3E%3Cline x1='-8' y1='-233' x2='808' y2='583'/%3E%3Cline x1='-8' y1='-583' x2='808' y2='233'/%3E%3C/g%3E%3Cg stroke='%23001846' stroke-width='7'%3E%3Cline x1='-8' y1='242' x2='808' y2='1058'/%3E%3Cline x1='-8' y1='542' x2='808' y2='1358'/%3E%3Cline x1='-8' y1='-558' x2='808' y2='258'/%3E%3Cline x1='-8' y1='-258' x2='808' y2='558'/%3E%3C/g%3E%3Cg stroke='%23001743' stroke-width='6'%3E%3Cline x1='-8' y1='267' x2='808' y2='1083'/%3E%3Cline x1='-8' y1='517' x2='808' y2='1333'/%3E%3Cline x1='-8' y1='-533' x2='808' y2='283'/%3E%3Cline x1='-8' y1='-283' x2='808' y2='533'/%3E%3C/g%3E%3Cg stroke='%2300163f' stroke-width='5'%3E%3Cline x1='-8' y1='292' x2='808' y2='1108'/%3E%3Cline x1='-8' y1='492' x2='808' y2='1308'/%3E%3Cline x1='-8' y1='-308' x2='808' y2='508'/%3E%3Cline x1='-8' y1='-508' x2='808' y2='308'/%3E%3C/g%3E%3Cg stroke='%2300153c' stroke-width='4'%3E%3Cline x1='-8' y1='467' x2='808' y2='1283'/%3E%3Cline x1='-8' y1='317' x2='808' y2='1133'/%3E%3Cline x1='-8' y1='-333' x2='808' y2='483'/%3E%3Cline x1='-8' y1='-483' x2='808' y2='333'/%3E%3C/g%3E%3Cg stroke='%23001439' stroke-width='3'%3E%3Cline x1='-8' y1='342' x2='808' y2='1158'/%3E%3Cline x1='-8' y1='442' x2='808' y2='1258'/%3E%3Cline x1='-8' y1='-458' x2='808' y2='358'/%3E%3Cline x1='-8' y1='-358' x2='808' y2='458'/%3E%3C/g%3E%3Cg stroke='%23001336' stroke-width='2'%3E%3Cline x1='-8' y1='367' x2='808' y2='1183'/%3E%3Cline x1='-8' y1='417' x2='808' y2='1233'/%3E%3Cline x1='-8' y1='-433' x2='808' y2='383'/%3E%3Cline x1='-8' y1='-383' x2='808' y2='433'/%3E%3C/g%3E%3Cg stroke='%23013' stroke-width='1'%3E%3Cline x1='-8' y1='392' x2='808' y2='1208'/%3E%3Cline x1='-8' y1='-408' x2='808' y2='408'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
+.p1 {
+    position: absolute;
+    left: 0;
+    width: 42%;
+    height: 70%;
+    border-radius: 20px;
+}
+.p2 {
+    position: absolute;
+    background: #d5d5d5;
+    right: 0;
+    width: 42%;
+    height: 70%;
+    border-radius: 20px;
+}
+
+
+.block3{
+    background: url(/imagem-pagina-principal/imagem-de-fundo/projeto-fundo2.png) no-repeat center fixed;
+}
+
+    </style>
+    <body>
+        <div class="container"> <!-- Essa Div Container Controla o site por completo-->
+            
+            <!--Topo Links-->
+            <header class="topo">
+                
+                <a href="/html/parte-1-aprensentação.html"><img src="/imagem-pagina-principal/imagem-de-fundo/topo2.jpg" 
+                    alt="" class="logo-site" width="40px" height="40px" style="border-radius: 50px;">
+                </a>
+
+                <nav>
+                <ul class="link-topo">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#">Links↴</a>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/jordanrafaell?tab=repositories" target="_blank">↳GitHub<img src="/imagem-pagina-principal/Logo-de-Redes-Sociais/GitHub.png" width="20px" height="20px" style="padding-left: 5px;"></a>
+                                <a href="https://www.linkedin.com/in/jordan-rafael-80b373215/" target="_blank">↳Linkedin<img src="/imagem-pagina-principal/Logo-de-Redes-Sociais/linkedin.png" width="20px" height="20px" style="padding-left:5px ;"></a>
+                                <a href="https://www.instagram.com/jordan.rafael157/" target="_blank">↳Instagram<img src="/imagem-pagina-principal/Logo-de-Redes-Sociais/instagram.png" width="20px" height="20px" style="padding-left:5px ;"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#projetos">Projetos↴</a>
+                             <ul>
+                                  <li><a href="/html/SistemaLogin.html" target="_blank">↳Sistema de Login</a></li>
+                                  <li><a href="/html/JuridicoPessoal.html" target="_blank">↳Juridico Pessoal</a></li>
+                                  <li><a href="#">↳Design</a></li>
+                               </ul>
+                        </li>
+                    <li><a href="#contato">Contato</a></li>
+            </ul>
+            </nav>
+            </header>
+
+        <!--Apresentação-->
+        
+        <a href="#" id="home"></a>
+        <section class="block1">
+
+            <div class="page-bg"></div>
+
+            <div class="animation-wrapper">
+            <div class="particle particle-1"></div>
+            <div div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+
+            </div>
+
+            <div class="apresentacao">
+
+            <div class="meu-home">
+                <p>Olá, meu nome é </p>
+                <h1>Jordan <span >Rafael</span> </h1>
+            </div>
+            
+            <div class="meu-paragr">
+                <p class="letra-personalizada">Eu sou um Desenvolvedor Web</p>
+            </div>
+            </div>
+            <div class="minha-imagem">
+                <img class="logo-eu" src="/imagem-pagina-principal/imagem-de-fundo/perfil1.jpg" alt="imagem de perfil">
+            </div>
+            
+        </section>
+        
+        <section class="block2">
+            <a href="#" id="Sobre"></a>
+            
+            <!--Sobre mim-->
+            
+            <div class="titulo1">
+
+    
+                <a href="#" id="sobre"></a>
+                <h1>Sobre</h1>
+            </div>
+            <div class="titulo2">
+                <p>
+                    Sou um Desenvolvedor
+                    apaixonado por codificar. <br>
+                    sempre busco por minhas ideias em pratica, Ainda não tenho experiência com projetos corporativos
+                    mas coloco cada ideia minha para funcionar através da programação.</p>
+                </div>
+                
+                
+                <!--Informações sobre mim-->
+                <div class="informacoes">
+                    <video autoplay loop class="background-video">
+                        <source src="/imagem-pagina-principal/imagem-de-fundo/sobre-mim.mp4" type="video/mp4">
+                    </video>
+                    
+                    <ul type="none">
+                    <li class="aniversario1"><p class="aniversario2">Aniversário: 2 de novembro de 2002</p></li>
+                    <li class="Cidade1"><p class="Cidade2">Cidade: Maua, São Paulo</p></li>
+                    <li class="Disponivel1"><p class="Disponivel2">Estágio: Disponivel</p></li>
+                    <li class="Escolaridade1"><p class="Escolaridade2">Escolaridade: Ensinio Medio 2◦Grau-Cursando</p></li>
+                </ul>
+            </div>
+        </section>
+        
+        
+        <!--meus projetos-->
+        
+        <section class="block3">
+            <h1>Projetos</h1>
+            <a href="#" id="projetos"></a>
+            <div class="trabalhos">
+                <iframe class="p1" src="/html/SistemaLogin.html" frameborder="0"></iframe>
+                <iframe class="p2" src="/html/JuridicoPessoal.html" frameborder="0"></iframe>            </div>
+        </section>
+        
+        
+        
+    </div>
+    </body>
+    </html>
